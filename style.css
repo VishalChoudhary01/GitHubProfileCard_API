@@ -1,0 +1,245 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+/*
+font-family: "Inter", sans-serif;
+font-family: "Roboto", sans-serif; 
+*/
+
+*,
+::after,
+::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+}
+body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #121111;
+}
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.card {
+  width: 10vw;
+  min-width: 270px;
+  height: 12vw;
+  min-height: 320px;
+  border: 1px solid #fff;
+  background-color: rgba(248, 247, 247, 0.084);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(12px);
+  border-radius: 10px;
+  box-shadow: 0 0 10px #424242;
+  z-index: 10;
+}
+.wrapper::before {
+  position: absolute;
+  content: "";
+  width: 200px;
+  height: 200px;
+  background: #07779a;
+  top: -70px;
+  left: -70px;
+  border-radius: 50%;
+  box-shadow: 0 0 20px 5px #3996b5;
+}
+.wrapper::after {
+  position: absolute;
+  content: "";
+  width: 200px;
+  height: 200px;
+  background: #088028;
+  bottom: -60px;
+  right: -50px;
+  border-radius: 50%;
+  box-shadow: 0 0 20px 5px #25a737;
+}
+.cardWrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.topSection {
+  width: 100%;
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5px;
+}
+.profileImage {
+  width: 20vw;
+  max-width: 8vw;
+  min-width: 15vh;
+  height: 20vw;
+  max-height: 8vw;
+  min-height: 15vh;
+  border-radius: 50%;
+  filter: drop-shadow(0 0 10px #939292);
+}
+.profileImage img {
+  background: #000;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+
+.content {
+  width: 100%;
+  height: calc(100% - 20vw);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Name_github_name {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.Name_github_name h2 {
+  color: #fdfdfcd0;
+  font-size: 20px;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  word-spacing: 4px;
+  letter-spacing: 1px;
+  padding: 4px 0;
+}
+.Name_github_name h3 {
+  font-size: 15px;
+  color: rgb(186, 189, 192);
+  font-family: "Roboto", sans-serif;
+}
+.repoNumber_updated {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  color: #eef1f2bf;
+  font-family: "Inter", sans-serif;
+}
+.repoNumber_updated p {
+  border-radius: 10%;
+  background: hsla(0, 14%, 96%, 0.078);
+  padding: 3px 6px;
+  backdrop-filter: blur(8px);
+  font-size: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 8px;
+}
+#repoLabel {
+  color: #1eb6e4;
+
+  font-size: 10px;
+  font-weight: 700;
+}
+#date {
+  display: flex;
+  flex-direction: column;
+}
+#dateLabel {
+  color: #1eb6e4;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.bottomSection {
+  width: 100%;
+  /* outline: 2px solid red; */
+}
+.followersFollowing {
+  width: 100%;
+  font-family: "roboto";
+  color: #eef1f2bf;
+  background: #4cf6e516;
+  backdrop-filter: blur(15px);
+  border-radius: 10px;
+  font-size: 14px;
+  padding: 5px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  text-shadow: 0 0 2px #373738, 0 0 1px #fff, 0 0 2px #222;
+  margin: 25px 2px;
+}
+
+.followersFollowing span:nth-child(1) {
+  color: #1eb6e4;
+  font-size: 14px;
+}
+.followersFollowing span:nth-child(2) {
+  font-size: 12px;
+  font-weight: bold;
+}
+.socialLink {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "roboto";
+}
+.link {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+.link a {
+  color: #07779a;
+  font-size: 14px;
+  text-decoration: none;
+  background: #eeeeee5f;
+  text-shadow: 0 0 2px white, 0 0 5px white, 0 0 8px rgb(255, 255, 255);
+  padding: 4px 10px;
+  border-radius: 10px;
+  letter-spacing: 1px;
+  font-weight: 800;
+  box-shadow: 0 0 2px 1px #07779a;
+  transition: all 0.3s ease-in;
+}
+.link a:hover {
+  color: #fff;
+  background: #07779a;
+  text-shadow: 0 0 2px rgb(115, 202, 237);
+  box-shadow: 0 0 5px 1px #07779a;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.socialLink button {
+  width: 80px;
+  padding: 4px 10px;
+  border: 2px solid #aea8a8;
+  background: #ef3013d5;
+  color: #ede8e8;
+  border-radius: 10px;
+  font-weight: 500;
+  box-shadow: 0 0 1px 1px rgb(229, 102, 102);
+  transition: all 0.3s ease-in;
+}
+
+.socialLink button:hover {
+  border: 2px solid #fff;
+  background: red;
+  color: #fff;
+  box-shadow: 0 0 15px 0 rgb(242, 20, 20);
+}
